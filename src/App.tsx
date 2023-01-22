@@ -1,5 +1,11 @@
+import Todos from './components/Todos';
+
 const App = () => {
-  return <h1>Hello world!</h1>;
+  return (
+    <div>
+      <Todos items={['Learn React', 'Learn TypeScript']} />
+    </div>
+  );
 };
 
 export default App;
