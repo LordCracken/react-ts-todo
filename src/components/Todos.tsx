@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Todo from '../models/todos';
+import TodoItem from './TodoItem';
 
 interface ITodos {
   items: Todo[];
@@ -9,7 +11,7 @@ const Todos: React.FC<ITodos> = ({ items }) => {
   return (
     <ul>
       {items.map(item => (
-        <li key={item.id}>{item.text}</li>
+        <TodoItem key={item.id} text={item.text} />
       ))}
     </ul>
   );
