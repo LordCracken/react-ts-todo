@@ -1,7 +1,11 @@
 import React, { useRef } from 'react';
 import classes from './NewTodo.module.css';
 
-const NewTodo: React.FC<{ onAddTodo: (text: string) => void }> = ({ onAddTodo }) => {
+interface INewTodo {
+  onAddTodo: (text: string) => void;
+}
+
+const NewTodo: React.FC<INewTodo> = ({ onAddTodo }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const submitHandler = (event: React.FormEvent) => {
